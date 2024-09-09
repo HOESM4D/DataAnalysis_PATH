@@ -5,36 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embedded Dashboard</title>
     <style>
-        /* Ensure the body takes up the full screen */
+        /* Ensure the body and html take up the full screen */
         html, body {
             margin: 0;
             padding: 0;
             height: 100%;
+            overflow: hidden; /* Prevent scrollbars from appearing */
         }
 
-        /* A container that will adjust iframe size responsively */
-        .iframe-container {
-            position: relative;
-            width: 100%;
-            height: 0;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-        }
-
-        /* Style the iframe to fit inside the container */
+        /* Style the iframe to take the full window size */
         iframe {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            border: 0;
+            border: none; /* Remove default border */
         }
     </style>
 </head>
 <body>
-    <div class="iframe-container">
-        <iframe src="https://ap2.ca.analytics.ibm.com/bi/?perspective=dashboard&amp;pathRef=.my_folders%2Fcapstone_coursera&amp;closeWindowOnLastView=true&amp;ui_appbar=false&amp;ui_navbar=false&amp;shareMode=embedded&amp;action=view&amp;mode=dashboard&amp;subView=model00000191d4d117af_00000000" 
-        allow="encrypted-media" allowfullscreen></iframe>
-    </div>
+    <iframe src="https://ap2.ca.analytics.ibm.com/bi/?perspective=dashboard&amp;pathRef=.my_folders%2Fcapstone_coursera&amp;closeWindowOnLastView=true&amp;ui_appbar=false&amp;ui_navbar=false&amp;shareMode=embedded&amp;action=view&amp;mode=dashboard&amp;subView=model00000191d4d117af_00000000"
+    allow="encrypted-media" allowfullscreen></iframe>
 </body>
 </html>
