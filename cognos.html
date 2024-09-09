@@ -13,13 +13,14 @@
             overflow: hidden; /* Prevent scrollbars from appearing */
         }
 
-        /* Style the iframe to take up the full window size */
+        /* Style the iframe to have a fixed size of 1920x1080 */
         iframe {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1920px;
+            height: 1080px;
+            transform: translate(-50%, -50%); /* Center the iframe */
             border: none; /* Remove default border */
         }
     </style>
@@ -28,4 +29,3 @@
     <iframe src="https://ap2.ca.analytics.ibm.com/bi/?perspective=dashboard&amp;pathRef=.my_folders%2Fcapstone_coursera&amp;closeWindowOnLastView=true&amp;ui_appbar=false&amp;ui_navbar=false&amp;shareMode=embedded&amp;action=view&amp;mode=dashboard&amp;subView=model00000191d4d117af_00000000"
     allow="encrypted-media" allowfullscreen></iframe>
 </body>
-</html>
